@@ -1,4 +1,9 @@
 {
   "extends": "@oechul/typescript-config/react.json",
-  "include": [".storybook/**/*", "stories/**/*"]
+  "include": [".storybook/**/*", "stories/**/*"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "declaration": true,
+    "declarationMap": true
+  }
 }
