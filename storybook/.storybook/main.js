@@ -13,8 +13,9 @@ const config = {
   stories: [
     '../stories/**/*.mdx',
     '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
-    '../apps/web/stories/**/*.stories.@(js|jsx|ts|tsx)',
-    '../apps/console/stories/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../packages/ui/src/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../apps/web/**/*.stories.@(js|jsx|ts|tsx)',
+    '../../apps/console/**/*.stories.@(js|jsx|ts|tsx)',
   ],
   addons: [
     getAbsolutePath('@storybook/addon-onboarding'),

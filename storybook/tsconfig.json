@@ -1,0 +1,4 @@
+{
+  "extends": "@oechul/typescript-config/react.json",
+  "include": [".storybook/**/*", "stories/**/*"]
+}
