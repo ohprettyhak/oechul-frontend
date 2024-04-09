@@ -6,7 +6,7 @@
     "dev": "turbo dev --parallel",
     "dev:console": "turbo dev --filter console",
     "dev:web": "turbo dev --filter web",
-    "dev:storybook": "turbo dev --filter web",
+    "dev:storybook": "turbo dev --filter storybook",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install"
