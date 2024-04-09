@@ -1,9 +1,14 @@
 {
-  "extends": "@oechul/typescript-config/react.json",
-  "include": [".storybook/**/*", "stories/**/*"],
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "React",
   "compilerOptions": {
     "jsx": "react-jsx",
-    "declaration": true,
-    "declarationMap": true
+    "declaration": false,
+    "useDefineForClassFields": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true
   }
 }
