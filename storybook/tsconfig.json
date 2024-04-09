@@ -1,14 +1,9 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "React",
+  "extends": "@oechul/typescript-config/base.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "declaration": false,
-    "useDefineForClassFields": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "allowJs": true
-  }
+    "incremental": true,
+    "jsx": "react-jsx"
+  },
+  "include": ["."],
+  "exclude": ["build", "node_modules"]
 }

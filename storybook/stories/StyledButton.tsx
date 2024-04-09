@@ -3,16 +3,12 @@ interface ButtonProps {
   backgroundColor?: string;
 }
 
-function StyledButton({ label, backgroundColor }: ButtonProps) {
+function StyledButton({ label, backgroundColor = '#fff' }: ButtonProps) {
   return (
     <button type="button" style={{ backgroundColor: `${backgroundColor}` }}>
       {label}
     </button>
   );
 }
-
-StyledButton.defaultProps = {
-  backgroundColor: '#fff',
-};
 
 export default StyledButton;
