@@ -20,6 +20,7 @@ export const InputContainer = styled.div<{ $isValid?: boolean }>`
   border: ${rem(1)} solid ${({ $isValid }) => getBorderColor($isValid)};
   border-radius: ${rem(10)};
   background-color: ${theme.colors.white};
+  transition: all 0.2s ease;
 `;
 
 export const InputBlock = styled.input`
@@ -27,22 +28,26 @@ export const InputBlock = styled.input`
   width: 100%;
   height: 100%;
   padding-inline: ${rem(24)};
-  padding-top: ${rem(18)};
+  padding-top: ${rem(16)};
 
   color: ${theme.colors.black};
   font-size: ${theme.fontSizes.md};
-  font-weight: ${theme.fontWeights.medium};
+  font-weight: ${theme.fontWeights.semibold};
 
   outline: none;
   border: none;
   background: none;
+  transition: all 0.2s ease;
 
   &:focus ~ label,
-  &:valid ~ label,
-  &:read-only ~ label {
-    top: ${rem(18)};
+  &:not(:placeholder-shown) ~ label {
+    top: ${rem(16)};
     font-size: ${theme.fontSizes['2xs']};
     transform: translateY(0);
+  }
+
+  &::placeholder {
+    color: transparent;
   }
 `;
 
@@ -57,6 +62,7 @@ export const InputLabel = styled.label<{ $isValid?: boolean }>`
   font-size: ${theme.fontSizes.md};
   font-weight: ${theme.fontWeights.medium};
 
+  pointer-events: none;
   user-select: none;
   transition: all 0.2s ease;
   transform: translateY(-50%);

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const HeaderRoot = styled.header`
   position: fixed;
   width: 100%;
-  height: ${rem(70)};
+  height: ${rem(68)};
 `;
 
 export const HeaderInner = styled.div`
@@ -28,4 +28,14 @@ export const HeaderTitle = styled.h1`
   font-weight: ${theme.fontWeights.semibold};
   left: 50%;
   transform: translateX(-50%);
+`;
+
+export const HeaderIconButton = styled.button`
+  ${theme.layout.center};
+  padding: ${rem(8)};
+  margin-left: ${rem(-8)};
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
 `;
