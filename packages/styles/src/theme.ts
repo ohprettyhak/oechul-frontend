@@ -35,6 +35,13 @@ const colors = {
     accentHover: '#FF6666',
     warningBg: '#FBF2EC',
   },
+  warning: {
+    main: '#DA8140',
+    bg: '#FBF2EC',
+  },
+  orange: {
+    bg: '#FFB527',
+  },
   green: {
     main: '#1CC54B',
     bg: '#E8F9ED',
@@ -79,23 +86,23 @@ const layout = {
   },
   column: {
     display: 'flex',
-    flexDirection: 'column',
+    'flex-direction': 'column',
   },
   columnCenter: {
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    'flex-direction': 'column',
   },
   columnCenterX: {
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
+    alignItems: 'center',
+    'flex-direction': 'column',
   },
   columnCenterY: {
     display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
+    justifyContent: 'center',
+    'flex-direction': 'column',
   },
 };
 

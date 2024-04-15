@@ -1,4 +1,5 @@
 import { ArrowLeftIcon, CloseIcon } from '@oechul/icons';
+import { ReactElement } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import {
@@ -12,14 +13,29 @@ import {
 interface HeaderProps {
   arrow?: boolean;
   close?: boolean;
+  closeAction?: () => void;
   branding?: boolean;
+  borderline: boolean;
   title?: string;
 }
 
-const Header = ({ arrow, close, branding, title }: HeaderProps) => {
+const Header = ({
+  arrow,
+  close,
+  closeAction,
+  branding,
+  borderline,
+  title,
+}: HeaderProps): ReactElement => {
   const navigate = useNavigate();
+
+  const handleClose = () => {
+    if (closeAction) closeAction();
+    else navigate(-1);
+  };
+
   return (
-    <HeaderRoot>
+    <HeaderRoot $borderline={borderline}>
       <HeaderInner>
         {!!arrow && (
           <HeaderIconButton onClick={() => navigate(-1)}>
@@ -27,7 +43,7 @@ const Header = ({ arrow, close, branding, title }: HeaderProps) => {
           </HeaderIconButton>
         )}
         {!!close && (
-          <HeaderIconButton onClick={() => navigate(-1)}>
+          <HeaderIconButton onClick={handleClose}>
             <CloseIcon width={16} height={16} stroke="black" />
           </HeaderIconButton>
         )}

@@ -20,6 +20,7 @@ export {
   CaratLeftIcon,
   CaratRightIcon,
 } from './components/action/CaratIcon';
+export { default as ImageAddIcon } from './components/action/ImageAddIcon';
 
 export { default as InstagramIcon } from './components/social/InstagramIcon';
 export { default as KakaoTalkIcon } from './components/social/KakaoTalkIcon';
@@ -27,5 +28,8 @@ export { default as MailIcon } from './components/social/MailIcon';
 
 export { default as CrownIcon } from './components/tag/CrownIcon';
 export { default as MemberIcon } from './components/tag/MemberIcon';
+
+export { default as Logo } from './components/assets/Logo';
+export { default as IDCard } from './components/assets/IDCard';
 
 export type { IconProps } from './types';
