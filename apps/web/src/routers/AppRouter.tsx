@@ -5,7 +5,6 @@ import useScreenSize from '@/hooks/useScreenSize.ts';
 import AlertPage from '@/pages/alert';
 import LoginPage from '@/pages/auth/login';
 import Register from '@/pages/auth/register';
-import RegisterCompletePage from '@/pages/auth/register/complete.tsx';
 import ErrorPage from '@/pages/error.tsx';
 import MainPrivateRouter from '@/routers/MainPrivateRouter.tsx';
 import MeetupPrivateRouter from '@/routers/MeetupPrivateRouter.tsx';
@@ -17,7 +16,6 @@ const pages = [
   { path: '/', component: MainPrivateRouter },
   { path: '/auth/login', component: LoginPage },
   { path: '/auth/register', component: Register },
-  { path: '/auth/register/complete', component: RegisterCompletePage },
   { path: '/dashboard/*', component: DashboardPrivateRouter },
   { path: '/meetup/*', component: MeetupPrivateRouter },
   { path: '/profile/*', component: ProfilePrivateRouter },
