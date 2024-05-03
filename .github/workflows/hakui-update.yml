@@ -21,8 +21,8 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.HAKUI_REPO_UPDATE_KEY }}
         with:
           source-directory: 'output'
-          destination-github-username: [ ohprettyhak ]
-          destination-repository-name: [ oechul-frontend ]
+          destination-github-username: ohprettyhak
+          destination-repository-name: oechul-frontend
           user-email: ${{ secrets.HAKUI_EMAIL }}
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
