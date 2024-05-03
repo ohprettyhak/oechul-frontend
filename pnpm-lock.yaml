@@ -35,6 +35,9 @@ importers:
 
   apps/console:
     dependencies:
+      '@oechul/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
       '@oechul/styles':
         specifier: workspace:*
         version: link:../../packages/styles
