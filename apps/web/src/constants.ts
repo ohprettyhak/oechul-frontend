@@ -1,3 +1,14 @@
+export const QUERIES = {
+  AUTH: {
+    LOGIN_KEY: 'AUTH_LOGIN_QUERY_KEY',
+    REGISTER_KEY: 'AUTH_REGISTER_QUERY_KEY',
+  },
+  UNIVERSITY: {
+    KEY: 'UNIVERSITY_QUERY_KEY',
+    DEPARTMENT_KEY: 'UNIVERSITY_DEPARTMENT_QUERY_KEY',
+  },
+};
+
 export const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export const POLICY = {

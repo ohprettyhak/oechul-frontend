@@ -3,8 +3,8 @@ import { useRoutes } from 'react-router-dom';
 
 import useScreenSize from '@/hooks/useScreenSize.ts';
 import AlertPage from '@/pages/alert';
-import LoginPage from '@/pages/auth/login';
-import Register from '@/pages/auth/register';
+import SignInPage from '@/pages/auth/signin';
+import SignUpPage from '@/pages/auth/signup';
 import ErrorPage from '@/pages/error.tsx';
 import MainPrivateRouter from '@/routers/MainPrivateRouter.tsx';
 import MeetupPrivateRouter from '@/routers/MeetupPrivateRouter.tsx';
@@ -14,8 +14,8 @@ import DashboardPrivateRouter from './DashboardPrivateRouter';
 
 const pages = [
   { path: '/', component: MainPrivateRouter },
-  { path: '/auth/login', component: LoginPage },
-  { path: '/auth/register', component: Register },
+  { path: '/auth/signin', component: SignInPage },
+  { path: '/auth/signup', component: SignUpPage },
   { path: '/dashboard/*', component: DashboardPrivateRouter },
   { path: '/meetup/*', component: MeetupPrivateRouter },
   { path: '/profile/*', component: ProfilePrivateRouter },
