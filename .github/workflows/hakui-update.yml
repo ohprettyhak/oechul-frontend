@@ -10,11 +10,11 @@ jobs:
     container: pandoc/latex
     steps:
       - uses: actions/checkout@v2
-      - name: install mustache
+      - name: Install mustache
         run: apk add ruby && gem install mustache
-      - name: create outputs
+      - name: Create outputs
         run: sh ./build.sh
-      - name: update hakui repository
+      - name: Update hakui repository
         id: push_directory
         uses: cpina/github-action-push-to-another-repository@main
         env:
@@ -26,5 +26,5 @@ jobs:
           user-email: ${{ secrets.HAKUI_EMAIL }}
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
-      - name: test get variable exported by ohprettyhak/oechul-frontend
+      - name: Test get variable exported by ohprettyhak/oechul-frontend
         run: echo $DESTINATION_CLONED_DIRECTORY
